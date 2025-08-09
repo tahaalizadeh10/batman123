@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مهارت‌ها | طاها (بتمن)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="day-mode">
+    <div class="bat-signal"></div>
+    <div class="bat-bg-animation skills-bg"></div>
+    
+    <header class="bat-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/bat-logo.png" alt="Batman Logo">
+                <span>طاها <em>(بتمن)</em></span>
+            </div>
+            <nav class="bat-nav">
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="resume.html">رزومه</a></li>
+                    <li><a href="skills.html" class="active">مهارت‌ها</a></li>
+                    <li><a href="contact.html">تماس</a></li>
+                </ul>
+            </nav>
+            <button id="mode-toggle" class="bat-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="bat-main">
+        <div class="container">
+            <section class="skills-section">
+                <h2 class="section-title">مهارت‌های <span class="bat-text">بتمن</span></h2>
+                
+                <div class="skills-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="programming">برنامه‌نویسی</button>
+                        <button class="tab-btn" data-category="web">توسعه وب</button>
+                        <button class="tab-btn" data-category="security">امنیت</button>
+                        <button class="tab-btn" data-category="other">سایر مهارت‌ها</button>
+                    </div>
+                    
+                    <div class="category-content">
+                        <!-- برنامه نویسی -->
+                        <div class="category-pane active" id="programming">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;" data-skill="Python"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;" data-skill="JavaScript"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;" data-skill="Java"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C++</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;" data-skill="C++"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- توسعه وب -->
+                        <div class="category-pane" id="web">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percent">98%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 98%;" data-skill="HTML/CSS"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percent">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%;" data-skill="React"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%;" data-skill="Node.js"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Vue.js</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;" data-skill="Vue.js"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- امنیت -->
+                        <div class="category-pane" id="security">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">امنیت شبکه</span>
+                                    <span class="skill-percent">94%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 94%;" data-skill="امنیت شبکه"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">تست نفوذ</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;" data-skill="تست نفوذ"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">رمزنگاری</span>
+                                    <span class="skill-percent">87%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 87%;" data-skill="رمزنگاری"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">فورنزیک دیجیتال</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;" data-skill="فورنزیک دیجیتال"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- سایر مهارت‌ها -->
+                        <div class="category-pane" id="other">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">هوش مصنوعی</span>
+                                    <span class="skill-percent">82%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 82%;" data-skill="هوش مصنوعی"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">یادگیری ماشین</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;" data-skill="یادگیری ماشین"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">دیتابیس‌ها</span>
+                                    <span class="skill-percent">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 88%;" data-skill="دیتابیس‌ها"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">DevOps</span>
+                                    <span class="skill-percent">83%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 83%;" data-skill="DevOps"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bat-certificates">
+                    <h3 class="sub-title">گواهینامه‌ها</h3>
+                    <div class="certificates-grid">
+                        <div class="certificate bat-card">
+                            <img src="images/cert-1.png" alt="Certified Ethical Hacker">
+                            <h4>هکر قانونمند حرفه‌ای (CEH)</h4>
+                            <p>صادر شده توسط EC-Council</p>
+                        </div>
+                        
+                        <div class="certificate bat-card">
+                            <img src="images/cert-2.png" alt="AWS Certified">
+                            <h4>معمار راه‌حل‌های AWS</h4>
+                            <p>صادر شده توسط آمازون</p>
+                        </div>
+                        
+                        <div class="certificate bat-card">
+                            <img src="images/cert-3.png" alt="CISSP">
+                            <h4>حرفه‌ای امنیت سیستم‌های اطلاعاتی (CISSP)</h4>
+                            <p>صادر شده توسط (ISC)²</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bat-footer">
+        <div class="container">
+            <p>© 2023 تمام حقوق برای طاها (بتمن) محفوظ است</p>
+            <div class="bat-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/mode-switcher.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Tab functionality for skills page
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.category-pane').forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding pane
+                btn.classList.add('active');
+                const category = btn.getAttribute('data-category');
+                document.getElementById(category).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

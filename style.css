@@ -1,0 +1,804 @@
+/* Reset و فونت‌ها */
+@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #f7b633;
+    --text-color: #e6e6e6;
+    --dark-text: #333333;
+    --light-gray: #f5f5f5;
+    --dark-gray: #222222;
+    --bat-yellow: #ffe600;
+    --bat-black: #000000;
+    --bat-gray: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tahoma', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+body.day-mode {
+    background-color: #f0f0f0;
+    color: var(--dark-text);
+}
+
+/* طرح‌بندی کلی */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* هدر */
+.bat-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.day-mode .bat-header {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.logo em {
+    color: var(--accent-color);
+    font-style: normal;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+}
+
+.day-mode .logo span {
+    color: var(--dark-text);
+}
+
+.bat-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.bat-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.day-mode .bat-nav a {
+    color: var(--dark-text);
+}
+
+.bat-nav a:hover {
+    color: var(--accent-color);
+}
+
+.bat-nav a.active {
+    color: var(--accent-color);
+}
+
+.bat-nav a.active:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.bat-mode-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.day-mode .bat-mode-toggle {
+    color: var(--dark-text);
+}
+
+.bat-mode-toggle:hover {
+    color: var(--accent-color);
+    transform: rotate(30deg);
+}
+
+/* محتوای اصلی */
+.bat-main {
+    padding-top: 100px;
+    min-height: calc(100vh - 150px);
+    position: relative;
+    z-index: 1;
+}
+
+/* بخش قهرمان */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.bat-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.bat-title span {
+    color: var(--accent-color);
+}
+
+.bat-text {
+    color: var(--accent-color);
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bat-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+.day-mode .bat-subtitle {
+    color: #666666;
+}
+
+.bat-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.bat-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.bat-button:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+}
+
+.day-mode .bat-button:hover {
+    color: var(--dark-text);
+    background-color: var(--accent-color);
+    opacity: 0.9;
+}
+
+.bat-button.secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.bat-button.secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+}
+
+.bat-avatar {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(247, 182, 51, 0.5));
+}
+
+/* کارت‌ها */
+.bat-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(247, 182, 51, 0.2);
+}
+
+.day-mode .bat-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(247, 182, 51, 0.5);
+}
+
+.day-mode .bat-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* فوتر */
+.bat-footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.day-mode .bat-footer {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bat-footer p {
+    margin-bottom: 15px;
+}
+
+.bat-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.bat-social a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.day-mode .bat-social a {
+    color: var(--dark-text);
+}
+
+.bat-social a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* صفحه رزومه */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.resume-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.resume-card h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.bat-list {
+    list-style: none;
+}
+
+.bat-list li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(247, 182, 51, 0.3);
+}
+
+.bat-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.bat-list h4 {
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+/* صفحه مهارت‌ها */
+.skills-categories {
+    margin-top: 40px;
+}
+
+.category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+}
+
+.category-content {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 300px;
+}
+
+.day-mode .category-content {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.category-pane {
+    display: none;
+}
+
+.category-pane.active {
+    display: block;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.skill-name {
+    font-weight: bold;
+}
+
+.skill-percent {
+    color: var(--accent-color);
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.day-mode .skill-bar {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), #ff8c00);
+    border-radius: 5px;
+    position: relative;
+    transition: width 1.5s ease;
+}
+
+.skill-progress:after {
+    content: attr(data-skill);
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: white;
+}
+
+.bat-certificates {
+    margin-top: 50px;
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.certificate {
+    text-align: center;
+    padding: 20px;
+}
+
+.certificate img {
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.certificate h4 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.certificate p {
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.day-mode .certificate p {
+    color: #666666;
+}
+
+/* صفحه تماس */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-top: 5px;
+}
+
+.info-content h4 {
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid rgba(247, 182, 51, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.day-mode .form-group input,
+.day-mode .form-group textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--dark-text);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(247, 182, 51, 0.3);
+}
+
+.bat-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+}
+
+.bat-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+}
+
+.day-mode .checkmark {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.bat-checkbox:hover input ~ .checkmark {
+    background-color: rgba(247, 182, 51, 0.2);
+}
+
+.bat-checkbox input:checked ~ .checkmark {
+    background-color: var(--accent-color);
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.bat-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.bat-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--dark-text);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.bat-location {
+    margin-top: 50px;
+}
+
+.map-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.bat-map {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-marker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 2rem;
+    animation: pulse 2s infinite;
+}
+
+/* عناوین بخش */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.sub-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+/* حالت شب */
+body.night-mode {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.night-mode .bat-header {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.night-mode .logo span {
+    color: var(--text-color);
+}
+
+.night-mode .bat-nav a {
+    color: var(--text-color);
+}
+
+.night-mode .bat-mode-toggle {
+    color: var(--text-color);
+}
+
+.night-mode .bat-card {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.night-mode .bat-footer {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.night-mode .bat-social a {
+    color: var(--text-color);
+}
+
+/* سیگنال خفاش */
+.bat-signal {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    background-image: url('../images/bat-signal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: 0.1;
+    z-index: 0;
+    animation: batSignal 10s linear infinite;
+}
+
+/* پس‌زمینه متحرک */
+.bat-bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.05;
+    background-image: url('../images/bat-pattern.png');
+    animation: batBgMove 100s linear infinite;
+}
+
+.resume-bg {
+    background-image: url('../images/bat-pattern-2.png');
+}
+
+.skills-bg {
+    background-image: url('../images/bat-pattern-3.png');
+}
+
+.contact-bg {
+    background-image: url('../images/bat-pattern-4.png');
+}
+
+/* انیمیشن‌ها */
+@keyframes batSignal {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes batBgMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
+}
+
+/* ریسپانسیو */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .bat-buttons {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        margin-top: 30px;
+    }
+    
+    .bat-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bat-nav ul {
+        gap: 10px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo span {
+        font-size: 1.2rem;
+    }
+    
+    .bat-title {
+        font-size: 2rem;
+    }
+    
+    .bat-buttons {
+        flex-direction: column;
+    }
+}

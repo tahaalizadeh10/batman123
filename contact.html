@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تماس | طاها (بتمن)</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="day-mode">
+    <div class="bat-signal"></div>
+    <div class="bat-bg-animation contact-bg"></div>
+    
+    <header class="bat-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/bat-logo.png" alt="Batman Logo">
+                <span>طاها <em>(بتمن)</em></span>
+            </div>
+            <nav class="bat-nav">
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="resume.html">رزومه</a></li>
+                    <li><a href="skills.html">مهارت‌ها</a></li>
+                    <li><a href="contact.html" class="active">تماس</a></li>
+                </ul>
+            </nav>
+            <button id="mode-toggle" class="bat-mode-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="bat-main">
+        <div class="container">
+            <section class="contact-section">
+                <h2 class="section-title">تماس با <span class="bat-text">بتمن</span></h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info bat-card">
+                        <h3 class="sub-title">اطلاعات تماس</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>آدرس</h4>
+                                <p>غار بتمن، زیرزمین وین مانور، گاتهام سیتی</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>تلفن</h4>
+                                <p>+1 555-BAT-CAVE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>ایمیل</h4>
+                                <p>taha.batman@wayne-enterprises.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>ساعات کاری</h4>
+                                <p>غروب تا طلوع آفتاب - همه روزه</p>
+                                <p>(به جز زمانی که در حال مبارزه با جرم هستم)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bat-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form bat-card">
+                        <h3 class="sub-title">پیام سریع</h3>
+                        <p>برای ارتباط سریع با من می‌توانید از فرم زیر استفاده کنید</p>
+                        
+                        <form id="bat-contact-form">
+                            <div class="form-group">
+                                <label for="name">نام شما</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">ایمیل</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">موضوع</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">پیام</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="bat-checkbox">
+                                    <input type="checkbox" required>
+                                    <span class="checkmark"></span>
+                                    من یک ربات نیستم (مطمئنید؟)
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="bat-button">ارسال پیام <i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="bat-location">
+                    <h3 class="sub-title">موقعیت من روی نقشه</h3>
+                    <div class="map-container bat-card">
+                        <img src="images/bat-map.png" alt="Batman Location Map" class="bat-map">
+                        <div class="map-marker">
+                            <i class="fas fa-map-pin"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bat-footer">
+        <div class="container">
+            <p>© 2023 تمام حقوق برای طاها (بتمن) محفوظ است</p>
+            <div class="bat-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/mode-switcher.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('bat-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('پیام شما با موفقیت ارسال شد! من (بتمن) به زودی با شما تماس خواهم گرفت.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
